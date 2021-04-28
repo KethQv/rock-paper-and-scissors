@@ -15,14 +15,14 @@ function displayText(text, device) {
         textContainer.animate(
             [
                 {transform: 'translateY(-900px)', opacity: 1, offset: 0},
-                {transform: 'translateY(100px)', opacity: 1, offset: .25},
+                {transform: 'translateY(10px)', opacity: 1, offset: .25},
                 {transform: 'translateY(-90px)', opacity: 1, offset: .50},
-                {transform: 'translateY(45px)', opacity: 1, offset: .75},
-                {transform: 'translateY(-30px)', opacity: 1, offset: .85},
+                {transform: 'translateY(5px)', opacity: 1, offset: .75},
+                {transform: 'translateY(-55px)', opacity: 1, offset: .85},
                 {transform: 'translateY(0px)', opacity: 1, offset: 1},
             ],
             {
-                duration: 1000,
+                duration: 500,
                 easing: 'linear',
                 delay: 0,
                 iterations: 1,
@@ -32,13 +32,13 @@ function displayText(text, device) {
         ).finished.then(() => {
             textContainer.animate(
                 [
-                    {transform: 'translateY(0px)', offset: 0},
-                    {transform: 'translateY(1000px)', offset: 1}
+                    {transform: 'translateY(0px)', opacity: 1, offset: 0},
+                    {transform: 'translateY(1000px)', opacity: 0, offset: 1}
                 ],
                 {
                     duration: 500,
                     easing: 'linear',
-                    delay: 1000,
+                    delay: 1300,
                     iteration: 1,
                     direction: 'normal',
                     fill: 'forwards',
@@ -52,39 +52,69 @@ function displayText(text, device) {
         span1.animate(
             [
                 {transform: 'translateX(-900px)', opacity: 1, offset: 0},
-                {transform: 'translateX(60px)', opacity: 1, offset: .25},
-                {transform: 'translateX(-50px)', opacity: 1, offset: .50},
-                {transform: 'translateX(30px)', opacity: 1, offset: .75},
-                {transform: 'translateX(-15px)', opacity: 1, offset: .85},
+                {transform: 'translateX(40px)', opacity: 1, offset: .25},
+                {transform: 'translateX(-25px)', opacity: 1, offset: .50},
+                {transform: 'translateX(10px)', opacity: 1, offset: .75},
+                {transform: 'translateX(-5px)', opacity: 1, offset: .85},
                 {transform: 'translateX(0)', opacity: 1, offse: 1}
             ],
             {
-                duration: 1000,
+                duration: 500,
                 easing: 'linear',
                 delay: 0,
                 iterations: 1,
                 direction: 'normal',
                 fill: 'forwards',
             }
-        );
+        ).finished.then(() => {
+            span1.animate(
+                [
+                    {transform: 'translateX(0px)', opacity: 1, offset: 0},
+                    {transform: 'translateX(900px', opacity: 0, offset: 1}
+                ],
+                {
+                    duration: 500,
+                    easing: 'linear',
+                    delay: 1300,
+                    iterations: 1,
+                    direction: 'normal',
+                    fill: 'forwards'
+                }
+            )
+        });
         span2.animate (
             [
                 {transform: 'translate(900px, 80%)', opacity: 1, offset: 0},
-                {transform: 'translate(-60px, 80%)', opacity: 1, offset: .25},
-                {transform: 'translate(50px, 80%)', opacity: 1, offset: .50},
-                {transform: 'translate(-30px, 80%)', opacity: 1, offset: .75},
-                {transform: 'translate(15px, 80%)', opacity: 1, offset: .85},
+                {transform: 'translate(-40px, 80%)', opacity: 1, offset: .25},
+                {transform: 'translate(25px, 80%)', opacity: 1, offset: .50},
+                {transform: 'translate(-10px, 80%)', opacity: 1, offset: .75},
+                {transform: 'translate(5px, 80%)', opacity: 1, offset: .85},
                 {transform: 'translate(0, 80%)', opacity: 1, offse: 1}
             ],
             {
-                duration: 1000,
+                duration: 500,
                 easing: 'linear',
                 delay: 0,
                 iterations: 1,
                 direction: 'normal',
                 fill: 'forwards',
             }
-        );
+        ).finished.then(() => {
+            span2.animate(
+                [
+                    {transform: 'translate(0px, 80%)', opacity: 1, offset: 0},
+                    {transform: 'translate(-900px, 80%)', opacity: 0, offset: 1}
+                ],
+                {
+                    duration: 500,
+                    easing: 'linear',
+                    delay: 1300,
+                    iterations: 1,
+                    direction: 'normal',
+                    fill: 'forwards'
+                }
+            )
+        });
     }
     return;
 }
