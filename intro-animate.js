@@ -29,7 +29,22 @@ function displayText(text, device) {
                 direction: 'normal',
                 fill: 'forwards',
             }
-        );
+        ).finished.then(() => {
+            textContainer.animate(
+                [
+                    {transform: 'translateY(0px)', offset: 0},
+                    {transform: 'translateY(1000px)', offset: 1}
+                ],
+                {
+                    duration: 500,
+                    easing: 'linear',
+                    delay: 1000,
+                    iteration: 1,
+                    direction: 'normal',
+                    fill: 'forwards',
+                }
+            );
+        });
     } else {
         splitHalfStatement(text);
         const span1 = document.querySelector('#span-1');
@@ -114,5 +129,6 @@ function twoSpan(text1, text2) {
     return;
 }
 
-displayText('ROCK PAPER AND SCISSORS', device);
-
+window.addEventListener('load', () => {
+    displayText('ROCK PAPER AND SCISSORS', device);
+});
