@@ -26,7 +26,10 @@ body {
 
 /*  ================================= Desktop styling ================================= */
 
+/*  rock paper and scissors entry text  */
+
 .box-dialog {
+    position: absolute;
     width: 90vw;
     height: fit-content;
     font-family: 'Permanent Marker', cursive;
@@ -55,6 +58,29 @@ body {
     }
 }
 
+/*  display choices  */
+
+.choices {
+    position: absolute;
+    width: 90vw;
+    max-width: 2000px;
+    height: fit-content;
+    bottom: 5%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.choices__item {
+    width: 20vw;
+    max-width: 480px;
+    min-width: calc(120px + 10vh);
+    display: flex;
+    justify-content: center;
+    fill: var(--foreground-color);
+}
 
 /*  ================================= Mobile styling ================================= */
 
@@ -117,7 +143,6 @@ body {
 }
 
 /*  choices carousel  */
-
 
 .scene {
     position: absolute;
@@ -192,17 +217,7 @@ body {
 
 
 
-/* .box-dialog, .span-dialog {
-    position: absolute;
-    width: 90%;
-    max-width: 1500px;
-    color: var(--foreground-color);
-    font-size: 10vw;
-    text-align: center;
-    font-family: 'Permanent Marker', cursive;
-    text-transform: uppercase;
-    font-weight: 900;
-} */
+
 
 /* 
 #container {
@@ -213,12 +228,7 @@ body {
     justify-content: space-evenly;
 }
 
-.choice {
-    width: 35vw;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-}
+
 
 .choice:hover {
     cursor: pointer;

@@ -17,5 +17,7 @@ window.addEventListener('load', () => {
     } else {
         let box_dialog = document.querySelector('.box-dialog');
         box_dialog.classList += ' box-dialog--top-entry';
+
+        // let wrappper = document.querySelecetor('.wrapper');
     }
 });
