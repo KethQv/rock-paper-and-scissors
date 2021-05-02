@@ -1,3 +1,34 @@
+/*
+.choice:hover {
+    cursor: pointer;
+    animation: bounce .5s linear; 
+}
+
+.choice svg .icon {
+    fill: var(--foreground-color);
+    transition: all .5s ease;
+}
+
+.choice:hover svg .icon{
+    fill: var(--enfasis-color);
+}
+
+@keyframes bounce {
+    20%, 50%, 80%, to {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    70% {
+        transform: translateY(-15px);
+    }
+    90% {
+        transform: translateY(-4px);
+    }
+}
+*/
+
 :root {
     --back-color: #FBDE44FF;
     --foreground-color: rgb(48, 48, 48);
@@ -217,34 +248,46 @@ body {
     }
 }
 
+/*  score counter styling */
 
-
-/*
-.choice:hover {
-    cursor: pointer;
-    animation: bounce .5s linear; 
+.score-counter {
+    background-color: var(--foreground-color);
+    position: absolute;
+    width: 10vw;
+    max-width: 250px;
+    min-width: 80px;
+    height: 10vw;
+    max-height: 250px;
+    min-height: 80px;
+    top: 5vh;
 }
 
-.choice svg .icon {
-    fill: var(--foreground-color);
-    transition: all .5s ease;
+.score-counter-user {
+    left: 0;
+    border-radius: 0 20px 20px 0;
+    animation: score-left-entry 1000ms 4500ms ease backwards;
 }
 
-.choice:hover svg .icon{
-    fill: var(--enfasis-color);
+.score-counter-pc {
+    right: 0;
+    border-radius: 20px 0 0 20px;
+    animation: score-right-entry 1000ms 4500ms ease backwards;
 }
 
-@keyframes bounce {
-    20%, 50%, 80%, to {
-        transform: translateY(0);
+@keyframes score-left-entry {
+    0% {
+        transform: translateX(-100%);
     }
-    40% {
-        transform: translateY(-30px);
+    100% {
+        transform: translateX(0);
     }
-    70% {
-        transform: translateY(-15px);
+}
+
+@keyframes score-right-entry {
+    0% {
+        transform: translateX(100%);
     }
-    90% {
-        transform: translateY(-4px);
+    100% {
+        transform: translateX(0);
     }
 }
