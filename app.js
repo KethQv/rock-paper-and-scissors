@@ -1,3 +1,4 @@
+// responsive rules
 window.addEventListener('load', () => {
     if (screen.width <= 500) {
         let span_1 = document.querySelector('.span-dialog-1');
@@ -17,6 +18,11 @@ window.addEventListener('load', () => {
     } else {
         let box_dialog = document.querySelector('.box-dialog');
         box_dialog.classList += ' box-dialog--top-entry';
+
+        let choices_items = document.querySelectorAll('.choices__item');
+        choices_items[0].classList += ' choices__rock--entry';
+        choices_items[1].classList += ' choices__scissors--entry';
+        choices_items[2].classList += ' choices__paper--entry';
 
         // let wrappper = document.querySelecetor('.wrapper');
     }
