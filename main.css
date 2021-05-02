@@ -60,6 +60,7 @@ body {
 /*  rock paper and scissors entry text  */
 
 .box-dialog {
+    visibility: hidden;
     position: absolute;
     width: 90vw;
     height: fit-content;
@@ -67,7 +68,6 @@ body {
     color: var(--foreground-color);
     font-size: 12vw;
     text-align: center;
-    visibility: hidden;
 }
 
 .box-dialog--top-entry {
@@ -248,7 +248,28 @@ body {
     }
 }
 
-/*  score counter styling */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  score counter styling for both devices */
 
 .score-counter {
     background-color: var(--foreground-color);

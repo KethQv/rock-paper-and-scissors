@@ -23,7 +23,5 @@ window.addEventListener('load', () => {
         choices_items[0].classList += ' choices__rock--entry';
         choices_items[1].classList += ' choices__scissors--entry';
         choices_items[2].classList += ' choices__paper--entry';
-
-        // let wrappper = document.querySelecetor('.wrapper');
     }
 });
