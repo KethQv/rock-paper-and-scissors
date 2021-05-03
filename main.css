@@ -201,7 +201,7 @@ body {
     position: absolute;
     width: 300px;
     height: 300px;
-    top:55vh;
+    bottom: 3vh;
     perspective: 700px;
 }
 
@@ -281,9 +281,33 @@ body {
     max-height: 250px;
     min-height: 80px;
     top: 5vh;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.score-counter span {
+    font-size: 3.7vw;
 }
 
-.score-counter-user {
+.score-counter span.score-counter__label{
+    font-size: 2.3vw;
+}
+
+@media screen and (max-width: 500px) {
+    .score-counter span {
+        font-size: 8vw;
+    }
+
+    .score-counter span.score-counter__label{
+        font-size: 5vw;
+    }
+}
+
+.score-counter-player {
     left: 0;
     border-radius: 0 20px 20px 0;
     animation: score-left-entry 1000ms 4500ms ease backwards;
