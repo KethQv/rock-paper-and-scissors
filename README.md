@@ -1,7 +1,7 @@
 # Rock, paper and scissors
 Currently on working... 🛠
 
-Take a look here: https://kethqv.github.io/rock-paper-and-scissors/
+Take a look here: https://cin4ed.github.io/rock-paper-and-scissors/
 
 What I learned so far:
 * How to target html elements from JavaScript ✅
